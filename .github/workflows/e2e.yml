@@ -1,0 +1,17 @@
+name: E2E Test
+on:
+  push:
+    branches:
+      - 'e2e-**'
+  pull_request:
+    branches:
+      - develop
+    types:
+      - closed
+
+jobs:
+  hello-world:
+    steps:
+      - run: |
+          echo "Hello World"
+          exit 0
